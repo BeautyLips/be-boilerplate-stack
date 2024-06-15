@@ -16,7 +16,7 @@ const FRAMEWORK_TYPES = {
   // "react": "React",
   // "nextjs": "NextJs",
   vue: "Vue",
-  // "nuxtjs": "NuxtJs"
+  nuxt: "Nuxt",
 }
 
 const PROJECT_TYPES = {
@@ -28,6 +28,11 @@ const VUE_BOILERPLATE_CLASSES = {
   "vue-playground-default": "Playground default",
   "vue-base-router-fetcher": "Base + Router + Fetcher",
   "vue-base": "Base",
+}
+
+const NUXT_BOILERPLATE_CLASSES = {
+  "nuxt-playground-default": "Playground default",
+  "nuxt-base": "Base",
 }
 
 const DIALOG_KEY = {
@@ -110,6 +115,28 @@ class VueBoilerplateClasses extends Handler {
   }
 }
 
+class NuxtBoilerplateClasses extends Handler {
+  async handle(answersPrev) {
+    if (
+      answersPrev.projectType === PROJECT_TYPES.boilerplate &&
+      answersPrev.frameworkType === FRAMEWORK_TYPES.nuxt
+    ) {
+      const answers = await inquirer.prompt([
+        {
+          type: "list",
+          name: DIALOG_KEY.projectClass,
+          message: "Select class",
+          choices: Object.values(NUXT_BOILERPLATE_CLASSES),
+        },
+      ])
+
+      return super.handle({ ...answersPrev, ...answers })
+    } else {
+      return super.handle({ ...answersPrev })
+    }
+  }
+}
+
 class ProjectName extends Handler {
   async handle(answersPrev) {
     const answers = await inquirer.prompt([
@@ -138,6 +165,13 @@ class Setup extends Handler {
       projectType === PROJECT_TYPES.boilerplate
     ) {
       selectedProjectFolder = Object.entries(VUE_BOILERPLATE_CLASSES).find(
+        ([folderName, question]) => question === projectClass,
+      )?.[0]
+    } else if (
+      frameworkType === FRAMEWORK_TYPES.nuxt &&
+      projectType === PROJECT_TYPES.boilerplate
+    ) {
+      selectedProjectFolder = Object.entries(NUXT_BOILERPLATE_CLASSES).find(
         ([folderName, question]) => question === projectClass,
       )?.[0]
     }
@@ -176,7 +210,14 @@ class Setup extends Handler {
 /* Run */
 /* ******************* */
 
-const handlers = [Frameworks, Types, VueBoilerplateClasses, ProjectName, Setup]
+const handlers = [
+  Frameworks,
+  Types,
+  VueBoilerplateClasses,
+  NuxtBoilerplateClasses,
+  ProjectName,
+  Setup,
+]
 
 const handlersInstances = []
 

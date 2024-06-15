@@ -338,3 +338,4 @@ dist-ssr
 /cypress/screenshots/
 .idea
 .output
+.npmrc
