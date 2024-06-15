@@ -1,5 +1,7 @@
 # Beauty Boilerplate Stack
 
+![lips](https://github.com/BeautyLips/be-boilerplate-stack/assets/172837583/406701b3-4c42-4bc1-be9e-9f8e588ac175)
+
 ## High quality boilerplate and template presets for React, Vue and more.
 
 Install
