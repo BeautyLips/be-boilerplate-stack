@@ -1,0 +1,35 @@
+$width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
+$width-xl: 1200px;
+$width-xxl: 1600px;
+
+@mixin min-sm {
+  @media (min-width: #{$width-sm}) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  @media (min-width: #{$width-md}) {
+    @content;
+  }
+}
+
+@mixin min-lg {
+  @media (min-width: #{$width-lg}) {
+    @content;
+  }
+}
+
+@mixin min-xl {
+  @media (min-width: #{$width-xl}) {
+    @content;
+  }
+}
+
+@mixin min-xxl {
+  @media (min-width: #{$width-xxl}) {
+    @content;
+  }
+}

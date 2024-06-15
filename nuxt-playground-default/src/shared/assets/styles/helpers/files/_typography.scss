@@ -1,0 +1,10 @@
+@use "../../utils" as *;
+@use "../../core" as *;
+
+.h-caption-1 {
+  @include caption-1;
+}
+
+.h-caption-2 {
+  @include caption-2;
+}

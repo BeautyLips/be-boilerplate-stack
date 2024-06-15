@@ -1,0 +1,69 @@
+@use "reset";
+@use "core" as *;
+@use "utils" as *;
+@use "helpers" as *;
+@use "sass:map";
+@tailwind utilities;
+@include font-face(
+  "Roboto",
+  "Roboto-Bold",
+  "@/shared/assets/fonts",
+  700,
+  normal
+);
+@include font-face(
+  "Roboto",
+  "Roboto-Regular",
+  "@/shared/assets/fonts",
+  400,
+  normal
+);
+
+:root {
+  @each $name, $col in $color {
+    --#{$name}: #{$col};
+  }
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: $root-width-min;
+  margin: 0;
+  padding: 0;
+
+  font-size: $root-font-size-default;
+  font-family: Roboto, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: $root-width-min;
+  margin: 0;
+  padding: 0;
+
+  font-size: $root-font-size-default;
+  line-height: 1.4;
+
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}

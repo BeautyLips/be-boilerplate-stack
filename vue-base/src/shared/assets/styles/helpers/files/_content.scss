@@ -1,0 +1,18 @@
+@use "../../utils" as *;
+@use "../../core" as *;
+
+.h-container {
+  @include container;
+}
+
+.h-sr-only {
+  @include sr-only;
+}
+
+.h-text-ellipsis {
+  @include text-ellipsis;
+}
+
+.h-dont-break-out {
+  @include dont-break-out;
+}

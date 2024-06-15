@@ -1,0 +1,69 @@
+{
+  "name": "@beautylips/be-boilerplate-stack",
+  "description": "High quality boilerplate and template presets for React, Vue and more",
+  "keywords": [
+    "React",
+    "NextJs",
+    "Vue",
+    "NuxtJs",
+    "Boilerplate",
+    "Template",
+    "Starter"
+  ],
+  "author": {
+    "name": "Gurov Dmitriy",
+    "email": "beautylips.libs@gmail.com",
+    "url": "https://github.com/BeautyLips"
+  },
+  "public": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/BeautyLips/be-boilerplate-stack/issues",
+    "email": "beautylips.libs@gmail.com"
+  },
+  "homepage": "https://github.com/BeautyLips/be-boilerplate-stack#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeautyLips/be-boilerplate-stack.git"
+  },
+  "version": "2.0.0",
+  "type": "module",
+  "bin": {
+    "be-boilerplate-stack": "index.js"
+  },
+  "scripts": {
+    "start": "npx @beautylips/be-boilerplate-stack@latest",
+    "postinstall": "echo 'For usage package run: npx @beautylips/be-boilerplate-stack@latest'",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .eslintignore",
+    "lint:prettier": "prettier --write \"**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,css,scss,less,md,json}\" --ignore-path .prettierignore",
+    "update": "ncu --interactive --format group",
+    "update:node": "volta pin node@lts",
+    "settings:envinfo": "npx envinfo --system --binaries",
+    "settings:executable": "node executable.config.cjs",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "inquirer": "^9.2.22",
+    "lodash": "^4.17.21",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4"
+  },
+  "volta": {
+    "node": "20.13.1",
+    "npm": "10.5.2"
+  },
+  "engines": {
+    "node": ">= 20",
+    "npm": ">= 10"
+  }
+}
