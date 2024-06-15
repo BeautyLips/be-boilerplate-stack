@@ -29,7 +29,7 @@
     "type": "git",
     "url": "git+https://github.com/BeautyLips/be-boilerplate-stack.git"
   },
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "bin": {
     "be-boilerplate-stack": "index.js"
@@ -46,9 +46,11 @@
     "settings:executable": "node executable.config.cjs",
     "prepare": "husky"
   },
+  "dependencies": {
+    "inquirer": "^9.2.22"
+  },
   "devDependencies": {
     "inquirer": "^9.2.22",
-    "lodash": "^4.17.21",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "eslint": "^8.57.0",
