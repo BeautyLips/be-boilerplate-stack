@@ -4,13 +4,13 @@
 
 ## High quality boilerplate and template presets for React, Vue and more.
 
-Install
+### Install
 
 ```sh
 npx @beautylips/be-boilerplate-stack@latest
 ```
 
-See more
+### See more
 
 - [GurovDmitriy](https://github.com/GurovDmitriy)
 - [BeautyLips](https://github.com/BeautyLips)
@@ -33,16 +33,6 @@ See more
 - Bundle analyzer
 - And more...
 
-### Quality:
-
-- [Husky](https://typicode.github.io/husky)
-- [Lint-staged](https://github.com/lint-staged/lint-staged/)
-- [Commitlint](https://commitlint.js.org/)
-- [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-- [Eslit](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Stylelint](https://stylelint.io/)
-
 ### Motivation
 
 Get a basic example of setting up the environment,
@@ -56,6 +46,16 @@ The pack contains templates with examples and empty ones.
 Linters are scheduled to run on a commit, you can call the command manually,
 but it is better to configure the editor to automatically format when saving the file.
 You will find more descriptions in readme.md or docs.md in the folder of each project.
+
+### Resources:
+
+- [Husky](https://typicode.github.io/husky)
+- [Lint-staged](https://github.com/lint-staged/lint-staged/)
+- [Commitlint](https://commitlint.js.org/)
+- [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [Eslit](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Stylelint](https://stylelint.io/)
 
 ### Tasks:
 

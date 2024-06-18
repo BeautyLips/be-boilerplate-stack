@@ -1,4 +1,4 @@
-# Vue Boilerplate - Playground default
+# Nuxt Boilerplate - Boilerplate default
 
 ---
 
